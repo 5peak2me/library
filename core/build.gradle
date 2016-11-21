@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+}
+
+publish {
+    userOrg = '5upport'//bintray.com用户名
+    groupId = 'com.jinlin.base'//jcenter上的路径
+    artifactId = 'library'//项目名称
+    publishVersion = '0.1'//版本号
+    desc = 'Oh hi, this is a nice library for a project, right?'//描述，不重要
+    website = 'https://github.com/5peak2me/library'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
+
+// ./gradlew clean build mavenAndroidJavadocsJar mavenAndroidSourcesJar generatePomFileForMavenPublication bintrayUpload -PbintrayUser=5upport -PbintrayKey=f07f69af13042a175672c035b29edc74d5b56fc4 -PdryRun=false

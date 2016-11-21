@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--added by Jinlin on 2016-6-13-->
+    <!--文字大小标签-->
+    <declare-styleable name="LabelView">
+        <attr name="leftText" format="string" />
+        <attr name="rightText" format="string" />
+        <attr name="topText" format="string" />
+        <attr name="bottomText" format="string" />
+        <attr name="leftTextAppearance" format="reference" />
+        <attr name="rightTextAppearance" format="reference" />
+        <attr name="topTextAppearance" format="reference" />
+        <attr name="bottomTextAppearance" format="reference" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <!-- 支持自定义比例以及时间间隔 -->
+    <declare-styleable name="BannerView">
+        <attr name="ratio" format="float" />
+        <attr name="defaultResId" format="reference" />
+        <attr name="interval" format="integer" />
+        <attr name="isAutoScroll" format="boolean" />
+    </declare-styleable>
+
+    <!-- 支持预览布局的ViewPager -->
+    <declare-styleable name="CustomViewPager">
+        <attr name="tools_layout0" format="reference" />
+    </declare-styleable>
+
+    <!--宽高比固定ImageView-->
+    <declare-styleable name="RatioImageView">
+        <attr name="originWidth" format="integer"/>
+        <attr name="originHeight" format="integer"/>
+    </declare-styleable>
+
+    <!--added by Jinlin on 2016-6-13-->
+    <declare-styleable name="TabIndicator">
+        <attr name="tpi_tabPadding" format="reference|dimension"/>
+        <attr name="tpi_indicatorColor" format="reference|color"/>
+        <attr name="tpi_indicatorHeight" format="reference|dimension"/>
+        <attr name="tpi_underLineColor" format="reference|color"/>
+        <attr name="tpi_underLineHeight" format="reference|dimension"/>
+        <attr name="tpi_indicatorMode" format="integer">
+            <enum name="match_parent" value="-1"/>
+            <enum name="wrap_content" value="-2"/>
+        </attr>
+        <attr name="android:textAppearance"/>
+        <attr name="tpi_tabBackground" format="reference"/>
+        <attr name="tpi_mode" format="integer">
+            <enum name="scroll" value="0x00000000"/>
+            <enum name="fixed" value="0x00000001"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="focusImage" format="reference"/>
+        <attr name="unfocusImage" format="reference"/>
+        <attr name="clearIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LineGridView">
+        <attr name="isInScrollView" format="boolean" />
+        <attr name="lineColor" format="reference|color" />
+    </declare-styleable>
+
+</resources>
